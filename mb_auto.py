@@ -5,7 +5,7 @@
 #  script optionally takes three arguments:
 #    number of players (2, 3, 4, or 6)
 #    number of games (integer greater than zero)
-#    pause between games flag (Y/N)
+#    pause between hands flag (Y/N)
 #
 #  Game description
 #  ----------------
@@ -79,7 +79,7 @@ print "Welcome to Mille Bornes!"
 print
 
 if len(sys.argv) not in [1, 4]:
-    print "Invalid number of arguments. Script takes 0 or 3 arguments [number of players, number of games, pause between games flag (Y/N)]."
+    print "Invalid number of arguments. Script takes 0 or 3 arguments [number of players, number of games, pause between hands flag (Y/N)]."
     print
     exit()
 if len(sys.argv) == 4:
@@ -123,7 +123,7 @@ if len(sys.argv) == 1:
             utils.sound_bell()
     pause_input_err = True
     while pause_input_err:
-        pause_flag = raw_input("Pause between games? (Y/N): ")
+        pause_flag = raw_input("Pause between hands? (Y/N): ")
         print
         if pause_flag.upper() in ["N", "Y"]:
             pause_input_err = False
